@@ -215,6 +215,8 @@
         //获取通知详情
         public function getNotice()
         {
+            $inc = $this->incRead();
+
             return \App\Models\Man30\SystemNotice::where('id', $this->getId())->first();
         }
 
