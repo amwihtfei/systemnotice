@@ -221,12 +221,12 @@
         //删除通知
         public function deleteNotice()
         {
-
+            return \App\Models\Man30\SystemNotice::where('id', $this->getId())->delete();
         }
 
-        //记录阅读通知数据
-        public function recordRead()
+        //阅读+1
+        public function incRead()
         {
-
+            return \App\Models\Man30\SystemNotice::where('id', $this->getId())->increment();
         }
     }

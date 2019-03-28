@@ -15,12 +15,13 @@
         {
             Schema::create('systemnotice', function (Blueprint $table) {
                 $table->bigIncrements('id');
-                $table->string('name');
-                $table->string('email')->unique();
-                $table->timestamp('email_verified_at')->nullable();
-                $table->string('password');
-                $table->rememberToken();
-                $table->timestamps();
+                $table->string('uuid', 64);
+                $table->string('title');
+                $table->string('desc');
+                $table->text('content');
+                $table->tinyint('status', 1);
+                $table->datetime('created_at');
+                $table->datetime('updated_at');
             });
         }
 
