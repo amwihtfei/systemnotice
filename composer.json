@@ -1,0 +1,24 @@
+{
+  "name": "man30\/systemnotice",
+  "description": "saas系统默认通知",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "xiaofeng",
+      "email": "man302015@qq.com"
+    }
+  ],
+  "require": {},
+  "autoload": {
+    "psr-4": {
+      "man30\\systemnotice\\": "src"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "man30\\systemnotice\\ServiceProvider"
+      ]
+    }
+  }
+}
