@@ -17,11 +17,11 @@
                 $table->bigIncrements('id');
                 $table->string('uuid', 64);
                 $table->string('title');
-                $table->string('desc');
+                $table->string('desc')->nullable();
                 $table->text('content');
                 $table->tinyInteger('status');
                 $table->datetime('created_at');
-                $table->datetime('updated_at');
+                $table->datetime('updated_at')->nullable();
             });
         }
 
