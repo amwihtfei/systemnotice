@@ -209,7 +209,9 @@
         //获取通知列表
         public function getNotices()
         {
-            return \App\Models\Man30\SystemNotice::where('title', 'like', '%' . $this->getTitle() . '%')->paginate();
+            return \App\Models\Man30\SystemNotice::where('uuid', $this->getUuid())
+                                                 ->where('title', 'like', '%' . $this->getTitle() . '%')
+                                                 ->orderBy('id', 'desc')->paginate();
         }
 
         //获取通知详情
