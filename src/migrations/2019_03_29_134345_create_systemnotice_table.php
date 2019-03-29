@@ -19,7 +19,7 @@
                 $table->string('title');
                 $table->string('desc');
                 $table->text('content');
-                $table->tinyint('status', 1);
+                $table->tinyInteger('status');
                 $table->datetime('created_at');
                 $table->datetime('updated_at');
             });
